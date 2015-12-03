@@ -1,0 +1,15 @@
+---
+layout: default
+---
+<picture>
+<source srcset="../photos/largex2/{{ post.title }}.jpg 1880w,
+				../photos/mediumx2/{{ post.title }}.jpg 1240w,
+				../photos/largex1/{{ post.title }}.jpg 940w,
+				../photos/mediumx1/{{ post.title }}.jpg 620w,
+				../photos/smallx2/{{ post.title }}.jpg 600w,
+				../photos/smallx1/{{ post.title }}.jpg 300w"
+	sizes="(min-width: 960px) calc(60rem - 20px), calc(100vw - 20px)">
+	 
+<img src="../photos/largex1/{{ post.title }}.jpg" alt="Some photo">
+</picture>
+    {{ content }}

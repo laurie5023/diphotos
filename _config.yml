@@ -1,0 +1,47 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Your awesome title
+email: your-email@domain.com
+description: > # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://davidisaacsonphotography.co.uk" # the base hostname & protocol for your site
+twitter_username: jekyllrb
+github_username:  jekyll
+
+# Build settings
+markdown: kramdown
+
+mini_magick:
+    smallx1:
+        source: photos/original
+        destination: photos/smallx1
+        resize: "300x192"
+    smallx2:
+        source: photos/original
+        destination: photos/smallx2
+        resize: "600x384"
+mediumx1:
+source: photos/original
+destination: photos/mediumx1
+resize: "620x416"
+largex1:
+source: photos/original
+destination: photos/largex1
+resize: "940x608"
+mediumx2:
+source: photos/original
+destination: photos/mediumx2
+resize: "1240x832"
+largex2:
+source: photos/original
+destination: photos/largex2
+resize: "1880x1216"

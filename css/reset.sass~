@@ -1,0 +1,78 @@
+﻿/* &&&--- RESETS ---&&& */
+
+/* Use a sensible box model & zero out margins */
+
+*, *:before, *:after
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	margin: 0 0
+	padding: 0 0
+
+
+/* Stop scrollbar-induced jumping */
+
+html
+	overflow-y: scroll
+
+/* Make images and embeds responsive */
+
+img, object, embed
+	max-width: 100%
+
+
+/* Fix silly IE borders */
+
+img
+	border: 0
+
+/* Custom text select colour */
+
+::-moz-selection
+	background: #b6e55c
+	color: #fff
+	text-shadow: none
+
+::selection
+	background: #b6e55c
+	color: #fff
+	text-shadow: none
+
+
+/* Stop <sup> and <sub> interfering with line-height */
+
+sup
+	vertical-align: top
+
+sub
+	vertical-align: bottom
+
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+
+button, input, select, textarea
+	margin: 0
+
+/* Make buttons play nice in IE */
+
+button, input[type=button]
+	width: auto
+	overflow: visible
+ 
+/* Scale images in IE7 more attractively */
+.ie7 img
+	-ms-interpolation-mode: bicubic
+
+/* Correct 'block' display not defined in IE 6/7/8/9 and Firefox 3. */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary, picture
+	display: block
+
+/* Display images & iframes as block */
+
+img, iframe
+	display: block
+
+/* Make Iframes and audio elements responsive */
+
+iframe, audio
+	width: 100%

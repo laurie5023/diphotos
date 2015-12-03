@@ -1,0 +1,351 @@
+/*	david-isaacson-photography.co.uk stylesheet
+	Design & development by silverliningwebsites.com
+	Email: contact@silverliningwebsites.com */
+	
+// Baselines
+
+$baseline: 3.2rem
+$doubleb: $baseline * 2
+$halfb: $baseline / 2
+
+// Colours
+
+$primary: #7bb115
+$accent: #b6e55c
+$text: #93a1a1
+$darktext: #073462
+
+// Borders
+
+$thick: 0.3rem
+$thickbrd: $thick solid $primary
+$thickpad: $halfb - $thick
+
+$thin: 0.1rem
+$thinbrd: $thin solid $text
+$thinpad: $halfb - $thin
+
+// Margins
+
+$thinmarg: 1rem
+
+/* Typography Setup */
+	
+html
+	font-size: 62.5%
+
+body
+	@extend %body
+	font-family: Linear_Regular, Arial, sans-serif
+	line-height: $baseline
+	color: $text
+	display: flex
+	flex-direction: column
+	min-height: 100vh
+	width: 100%
+	max-width: 96rem
+	margin: 0 auto
+	
+h1,h2,h3,h4,h5,h6,p,li,img
+	@extend %bmarg
+	
+h1,h2
+	@extend %large
+	
+h3
+	@extend %body
+	
+h4,h5,h6
+	@extend %small
+	
+h5
+	@extend %zerom
+
+a
+	color: $darktext
+	&:hover, &.menuon
+		color: $text
+		
+ul,ol
+	list-style-position: inside
+	list-style-type: square
+
+// Placeholders
+
+%small
+	font-size: 1.8rem
+	
+%body
+	font-size: 2.6rem
+	
+%large
+	font-size: 3.2rem
+	
+%bmarg
+	margin: $baseline 0
+	
+%zerom
+	margin: 0 0
+	
+%halfpad
+	padding-top: $halfb
+	padding-bottom: $halfb
+	
+%lpad
+	padding-left: 1rem
+
+%rpad
+	padding-right: 1rem
+
+%block
+	display: block
+	
+%inlinecont
+	font-size: 0
+	line-height: 0
+	
+%emlinks
+	text-decoration: none
+	text-transform: uppercase
+	
+%roundedleft
+	border-top-left-radius: .8rem
+	border-bottom-left-radius: .8rem
+	
+%roundedright
+	border-top-right-radius: .8rem
+	border-bottom-right-radius: .8rem
+	
+// Mixins
+
+@mixin menupad
+	padding-top: $thickpad
+	padding-bottom: $thinpad
+	
+@mixin thicktopbrd
+	border-top: $thick solid $primary
+
+@mixin thinbotbrd($type)
+	border-bottom: $thin $type $text
+	
+@mixin thintopbrd ($type)
+	border-top: $thin $type $text
+
+@mixin noshow
+	display: none
+	
+
+
+/* Further Typography */
+	
+/* Pagination */
+
+h4.pag
+	width: 50%
+	
+h4.pag>a
+	@extend %block
+	@extend %halfpad
+	@extend %emlinks
+	background-color: $primary
+	color: #fff
+	&:hover
+		background-color: $accent
+
+h4.prev
+	@extend %rpad
+	float: left
+	
+h4.next
+	@extend %lpad
+	text-align: right
+	float: right
+	
+h4.prev>a
+	@extend %roundedleft
+	@extend %lpad
+	
+h4.next>a
+	@extend %roundedright
+	@extend %rpad
+
+h4.prev>a:after
+	@extend %lpad
+	
+h4.next>a:before
+	@extend %rpad
+	
+/* Layout */
+	
+header, main>*, picture, footer
+	padding-left: 1rem
+	padding-right: 1rem
+
+header picture, section
+	padding: 0
+
+header
+	margin-bottom: $baseline
+	
+	p.menu
+		margin-bottom: 0
+		text-align: center
+		a
+			@extend %block
+			@include thicktopbrd
+			@include menupad
+			&:hover, &.menuon
+				border-top-color: $accent
+					
+	a
+		@extend %emlinks
+		picture:first-of-type
+			img
+				margin-bottom: 0
+			
+		picture:last-of-type
+			img
+				margin-top: 0
+	
+	.navigation
+		@include thinbotbrd(solid)
+		
+	nav
+		@extend %small
+		@extend %inlinecont
+		@include noshow
+		&:first-of-type
+			a:last-of-type
+				margin-bottom: $thinpad
+		>*
+			@extend %block
+			@extend %small
+			@extend %lpad
+			line-height: $baseline
+			
+		ul
+			li
+				@extend %zerom
+				a
+					color: $primary
+
+main
+	flex: 1
+	
+	section
+		float: left
+		width: 100%
+			
+	p:first-of-type, picture img
+		margin-top: 0
+	
+
+	
+picture.inline
+	margin-right: $thinmarg
+	width: 100%
+	
+footer>p
+	@extend %small
+	padding: $thinpad 0 $halfb
+	text-align: center
+	clear: both
+	margin: 0
+	@include thintopbrd (solid)
+	
+/* Custom Fonts */
+
+@font-face
+	font-family: 'Linear_Regular'
+	src: url('fonts/linear/linear-by-braydon-fuller.eot')
+	src: url('fonts/linear/linear-by-braydon-fuller.eot?#iefix') format('embedded-opentype'), url('fonts/linear/linear-by-braydon-fuller.woff2') format('woff2'), url('fonts/linear/linear-by-braydon-fuller.woff') format('woff'),	url('fonts/linear/linear-by-braydon-fuller.ttf') format('truetype'), url('fonts/linear/linear-by-braydon-fuller.svg#linearregular') format('svg')
+	font-weight: normal
+	font-style: normal
+	
+/* MEDIA QUERIES */
+			
+@media screen and (min-width: 480px)
+	
+	header
+		
+		nav
+			clear: both
+			a
+				display: inline-block
+				text-align: center
+				@include menupad
+				&:after
+					content: '|'
+					padding-left: $halfb
+					color: $darktext
+				&:last-of-type:after
+					content: ''
+			ul
+				@include noshow
+
+			&:first-of-type
+				display: block !important
+				@include thicktopbrd
+				a
+					margin-top: -0.3rem
+					@include thicktopbrd
+					&:hover, &.menuon
+						border-color: $accent
+					&:last-of-type
+						margin-bottom: 0
+			&:last-of-type
+				a
+					padding-top: 0
+						
+	p.menu
+		@include noshow
+		
+	h4.prev>a:after
+		content: 'Previous'
+	
+	h4.next>a:before
+		content: 'Next'
+		
+	section	picture, picture.inline
+		width: 50%
+		float: left
+	
+	section.home
+		width: 100%
+		picture
+			width: 100%
+	
+@media screen and (min-width: 720px)
+
+	section	picture, picture.inline
+		width: 33.3333%
+
+	section.home
+		&:first-of-type
+			width: 66.6666%
+		&:nth-of-type(2)
+			width: 33.3333%
+			picture:first-of-type
+				img
+					margin-bottom: $baseline
+		picture
+			width: 100%
+		
+		&:last-of-type
+			width: 100%
+
+	header
+		a
+			picture
+				img
+					float: left
+				&:first-of-type
+					img
+						margin-bottom: $baseline
+						margin-right: $thinmarg
+						
+				&:last-of-type
+					img
+						margin-top: $doubleb - ($baseline / 4)
+						margin-bottom: 0
+						margin-left: $thinmarg

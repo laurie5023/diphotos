@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<section>
+    {% for post in site.categories.Exposing Characters %}
+    <picture>
+<source srcset="../photos/largex2/{{ post.title }}.jpg 1880w,
+				../photos/mediumx2/{{ post.title }}.jpg 1240w,
+				../photos/largex1/{{ post.title }}.jpg 940w,
+				../photos/mediumx1/{{ post.title }}.jpg 620w,
+				../photos/smallx2/{{ post.title }}.jpg 600w,
+				../photos/smallx1/{{ post.title }}.jpg 300w"
+		sizes="(min-width: 960px) calc((60rem / 3) - 20px), (min-width: 720px) calc((.333 * 100vw) - 20px), (min-width: 480px) calc((.5 * 100vw) - 20px), calc(100vw - 20px)">
+<img src="../photos/largex1/{{ post.title }}.jpg" alt="Some photo">
+</picture>
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+</section>
