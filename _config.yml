@@ -29,19 +29,19 @@ mini_magick:
         source: photos/original
         destination: photos/smallx2
         resize: "600x384"
-mediumx1:
-source: photos/original
-destination: photos/mediumx1
-resize: "620x416"
-largex1:
-source: photos/original
-destination: photos/largex1
-resize: "940x608"
-mediumx2:
-source: photos/original
-destination: photos/mediumx2
-resize: "1240x832"
-largex2:
-source: photos/original
-destination: photos/largex2
-resize: "1880x1216"
+    mediumx1:
+        source: photos/original
+        destination: photos/mediumx1
+        resize: "620x416"
+    largex1:
+        source: photos/original
+        destination: photos/largex1
+        resize: "940x608"
+    mediumx2:
+        source: photos/original
+        destination: photos/mediumx2
+        resize: "1240x832"
+    largex2:
+        source: photos/original
+        destination: photos/largex2
+        resize: "1880x1216"
