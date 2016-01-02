@@ -1,0 +1,5 @@
+---
+layout: exposing-characters
+title: Exposing Characters
+---
+Some descriptive text.

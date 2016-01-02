@@ -45,3 +45,11 @@ mini_magick:
         source: photos/original
         destination: photos/largex2
         resize: "1880x1216"
+    widex2:
+        source: photos/wide
+        destination: photos/widex2
+        resize: "1240x253"
+    widex1:
+        source: photos/wide
+        destination: photos/widex1
+        resize: "940x192"

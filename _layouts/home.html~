@@ -1,0 +1,56 @@
+---
+layout: default
+---
+<section class="home">
+<picture>
+<source srcset="/photos/features/resized/largex2/gallery1.jpg 1880w,
+				/photos/features/resized/largex1/gallery1.jpg 940w,
+				/photos/features/resized/mediumx2/gallery1.jpg 1240w,
+				/photos/features/resized/mediumx1/gallery1.jpg 620w,
+				/photos/features/resized/smallx2/gallery1.jpg 600w,
+				/photos/features/resized/smallx1/gallery1.jpg 300w"
+		sizes="(min-width: 960px) calc(((60rem / 3) * 2) - 20px), calc(100vw - 20px)">
+<img src="/photos/features/resized/mediumx1/gallery1.jpg" alt="Some photo">
+</picture>
+</section>
+
+<section class="home">
+<picture>
+<source srcset="/photos/features/resized/largex2/gallery1.jpg 1880w,
+				/photos/features/resized/largex1/gallery1.jpg 940w,
+				/photos/features/resized/mediumx2/gallery1.jpg 1240w,
+				/photos/features/resized/mediumx1/gallery1.jpg 620w,
+				/photos/features/resized/smallx2/gallery1.jpg 600w,
+				/photos/features/resized/smallx1/gallery1.jpg 300w"
+		sizes="(min-width: 960px) calc(((60rem / 3) * 1) - 20px), calc(100vw - 20px)">
+<img src="/photos/features/resized/smallx1/gallery1.jpg" alt="Some photo">
+</picture>
+
+<picture>
+<source srcset="/photos/features/resized/largex2/gallery1.jpg 1880w,
+				/photos/features/resized/largex1/gallery1.jpg 940w,
+				/photos/features/resized/mediumx2/gallery1.jpg 1240w,
+				/photos/features/resized/mediumx1/gallery1.jpg 620w,
+				/photos/features/resized/smallx2/gallery1.jpg 600w,
+				/photos/features/resized/smallx1/gallery1.jpg 300w"
+		sizes="(min-width: 960px) calc(((60rem / 3) * 1) - 20px), calc(100vw - 20px)">
+<img src="/photos/features/resized/smallx1/gallery1.jpg" alt="Some photo">
+</picture>
+</section>
+
+<section class="home">
+<picture>
+<source media="(min-width: 960px)"
+		srcset="/photos/features/resized/widex2/gallery4.jpg 1240w, 
+				/photos/features/resized/widex1/gallery4.jpg 940w" 
+		sizes="calc(60rem - 20px)">
+<source srcset="/photos/features/resized/largex2/gallery1.jpg 1880w,
+				/photos/features/resized/largex1/gallery1.jpg 940w,
+				/photos/features/resized/mediumx2/gallery1.jpg 1240w,
+				/photos/features/resized/mediumx1/gallery1.jpg 620w,
+				/photos/features/resized/smallx2/gallery1.jpg 600w,
+				/photos/features/resized/smallx1/gallery1.jpg 300w"
+		sizes="calc(100vw - 20px)">
+<img src="/photos/features/resized/largex1/gallery1.jpg" alt="Some photo">
+</picture>
+</section>

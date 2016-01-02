@@ -22,26 +22,34 @@ markdown: kramdown
 
 mini_magick:
     smallx1:
-        source: _photos/original
-        destination: _photos/smallx1
+        source: photos/original
+        destination: photos/smallx1
         resize: "300x192"
     smallx2:
-        source: _photos/original
-        destination: _photos/smallx2
+        source: photos/original
+        destination: photos/smallx2
         resize: "600x384"
-mediumx1:
-source: _photos/original
-destination: _photos/mediumx1
-resize: "620x416"
-largex1:
-source: _photos/original
-destination: _photos/largex1
-resize: "940x608"
-mediumx2:
-source: _photos/original
-destination: _photos/mediumx2
-resize: "1240x832"
-largex2:
-source: _photos/original
-destination: _photos/largex2
-resize: "1880x1216"
+    mediumx1:
+        source: photos/original
+        destination: photos/mediumx1
+        resize: "620x416"
+    largex1:
+        source: photos/original
+        destination: photos/largex1
+        resize: "940x608"
+    mediumx2:
+        source: photos/original
+        destination: photos/mediumx2
+        resize: "1240x832"
+    largex2:
+        source: photos/original
+        destination: photos/largex2
+        resize: "1880x1216"
+    widex2:
+        source: photos/wide
+        destination: photos/widex2
+        resize: "1240x253"
+    widex1:
+        source: photos/wide
+        destination: photos/widex1
+        resize: "940x192"
